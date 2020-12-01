@@ -1,0 +1,64 @@
+{
+  "name": "pdft",
+  "version": "0.1.0",
+  "author": "Taner Topal @tanertopal",
+  "bin": {
+    "pdft": "bin/run"
+  },
+  "bugs": {
+    "url": "https://github.com/tanertopal/pdft/issues"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "pdf-lib": "^1.12.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.24.1",
+    "@oclif/test": "^1.2.7",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/tanertopal/pdft",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "pdft",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanertopal/pdft.git"
+  },
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "description": "[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io) [![Version](https://img.shields.io/npm/v/pdft.svg)](https://npmjs.org/package/pdft) [![Downloads/week](https://img.shields.io/npm/dw/pdft.svg)](https://npmjs.org/package/pdft) [![License](https://img.shields.io/npm/l/pdft.svg)](https://github.com/tanertopal/pdft/blob/master/package.json)",
+  "directories": {
+    "test": "test"
+  }
+}
